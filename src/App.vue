@@ -1,28 +1,46 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <keep-alive include="Search">
+      <router-view/>  
+    </keep-alive>
+    
+    <FooterGuide/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import FooterGuide from './components/FooterGuide.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    FooterGuide
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="less">
+  @import './common/css/style.less';
+  
+  html{
+    font-size: (100vw/375*40);  //10.67vw
+  }
+  
+  body{
+    margin:0;
+  }
+
+  ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  #app{
+    font-size: (16rem/40);
+  }
 </style>

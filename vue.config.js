@@ -1,4 +1,60 @@
-const { defineConfig } = require('@vue/cli-service')
-module.exports = defineConfig({
-  transpileDependencies: true
-})
+//此配置文件中的内容会覆盖vue默认配置
+
+module.exports={
+    lintOnSave:false,    //关闭语法检查
+    //代理，解决跨域问题
+    devServer:{
+        proxy:{
+            '/server':{
+                target:"http://127.0.0.1:9000",
+                ws:true,
+                changeOrigin:false
+            },
+            '/index_category':{
+                target:"http://127.0.0.1:4000",
+                ws:true,
+                changeOrigin:false
+            },
+            '/position':{
+                target:"http://127.0.0.1:4000",
+                ws:true,
+                changeOrigin:false
+            },
+            '/shops':{
+                target:"http://127.0.0.1:4000",
+                ws:true,
+                changeOrigin:false
+            },
+            '/captcha':{
+                target:"http://127.0.0.1:4000",
+                ws:true,
+                changeOrigin:false
+            },
+            "/login_pwd":{
+                target:"http://127.0.0.1:4000",
+                ws:true,
+                changeOrigin:false
+            },
+            "/sendcode":{
+                target:"http://127.0.0.1:4000",
+                ws:true,
+                changeOrigin:false
+            },
+            "/search_shops":{
+                target:"http://127.0.0.1:4000",
+                ws:true,
+                changeOrigin:false
+            },
+            "/login_sms":{
+                target:"http://127.0.0.1:4000",
+                ws:true,
+                changeOrigin:false 
+            },
+            "/logout":{
+                target:"http://127.0.0.1:4000",
+                ws:true,
+                changeOrigin:false 
+            }
+        }
+    }
+}
