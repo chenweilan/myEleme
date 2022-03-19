@@ -1,0 +1,28 @@
+
+.header-height{
+    height: (45rem/40);
+}
+
+.page-height{
+    height: (612rem/40);
+}
+
+.footer-height{
+    height: (55rem/40);
+}
+
+@viewWidth:(375rem/40);
+
+@mainBackColor:#02A774;
+@textColor:white;
+
+.clearFix::before,
+.clearFix::after{
+    content:"";
+    display: table;
+    clear: both;
+}
+
+//login页面
+@loginDivWidth:@viewWidth*0.85;
+@loginInputWidth:(312rem/40);

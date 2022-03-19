@@ -1,0 +1,15 @@
+.header-height {
+  height: 1.125rem;
+}
+.page-height {
+  height: 15.3rem;
+}
+.footer-height {
+  height: 1.375rem;
+}
+.clearFix::before,
+.clearFix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
